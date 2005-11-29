@@ -21,7 +21,7 @@ public class LoadTrainingEntity extends AuthorizedAction {
 
 	public LoadTrainingEntity() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public ActionForward executeAuthorized(ActionMapping mapping,
