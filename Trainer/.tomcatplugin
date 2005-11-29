@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tomcatProjectProperties>
+    <rootDir>/</rootDir>
+    <exportSource>false</exportSource>
+    <reloadable>true</reloadable>
+    <redirectLogger>false</redirectLogger>
+    <updateXml>true</updateXml>
+    <warLocation>/tmp/Trainer.war</warLocation>
+    <extraInfo>Additional info</extraInfo>
+    <webPath>/Trainer</webPath>
+</tomcatProjectProperties>

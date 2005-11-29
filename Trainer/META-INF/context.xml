@@ -1,0 +1,15 @@
+<!-- 
+     information about this application context 
+     the Database should be configured as a 
+     JNDI resource here with the name "calvin_test" 
+     so it can be accessed in a standard way by the application
+  -->
+<Context docBase="Trainer" path="/Trainer" reloadable="true">
+  <Resource name="trainer_db"
+    type="javax.sql.DataSource"
+    password="trainer"
+    driverClassName="com.mysql.jdbc.Driver"
+    maxIdle="2" maxWait="5000"
+    validationQuery="select count(*) from OJB_DLIST"
+    username="trainer" url="jdbc:mysql://calvin:3306/trainer?autoReconnect=true" maxActive="4"/>
+</Context>

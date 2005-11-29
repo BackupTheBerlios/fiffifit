@@ -1,0 +1,70 @@
+<!-- Mapping of User defined classes for the Trainer Webapp starts here -->
+
+<class-descriptor class="org.mtrainer.datamodel.User" table="MTUSER">
+  <field-descriptor name="id" column="ID" jdbc-type="INTEGER"
+  primarykey="true" autoincrement="true" />
+
+  <field-descriptor name="status" column="STATUS"
+  jdbc-type="INTEGER" />
+
+  <field-descriptor name="creationDate" column="CREATION"
+  jdbc-type="DATE" />
+
+  <field-descriptor name="modificationDate" column="MODIFICATION"
+  jdbc-type="DATE" />
+
+  <field-descriptor name="password" column="PASSWORD"
+  jdbc-type="VARCHAR" />
+
+  <field-descriptor name="logName" column="LOGNAME"
+  jdbc-type="VARCHAR" />
+
+  <field-descriptor name="lastLogin" column="LASTLOGIN"
+  jdbc-type="DATE" />
+
+  <field-descriptor name="firstName" column="FIRSTNAME"
+  jdbc-type="VARCHAR" />
+
+  <field-descriptor name="lastName" column="LASTNAME"
+  jdbc-type="VARCHAR" />
+</class-descriptor>
+
+<!-- the mapping for MTTRAIN = TrainingEntity -->
+<class-descriptor class="org.mtrainer.datamodel.TrainingEntity" table="MTTRAIN">
+  <field-descriptor name="id" column="ID" jdbc-type="INTEGER"
+  primarykey="true" autoincrement="true" />
+
+  <field-descriptor name="status" column="STATUS"
+  jdbc-type="INTEGER" />
+
+  <field-descriptor name="creationDate" column="CREATION"
+  jdbc-type="DATE" />
+
+  <field-descriptor name="modificationDate" column="MODIFICATION"
+  jdbc-type="DATE" />
+
+  <field-descriptor name="date" column="TRAINDATE"
+  jdbc-type="DATE" />
+
+  <field-descriptor name="durationMinutes" column="DURATION"
+  jdbc-type="INTEGER" />
+
+  <field-descriptor name="lengthKilometers" column="LENGTHKM"
+  jdbc-type="FLOAT" />
+
+  <field-descriptor name="remark" column="REMARK"
+  jdbc-type="VARCHAR" />
+  
+  <field-descriptor name="trainingTypeString" column="TRAINTYPE"
+  jdbc-type="VARCHAR" />
+
+  
+    <field-descriptor name="owner" column="OWNER"
+  jdbc-type="VARCHAR" />
+  
+  
+</class-descriptor>
+  
+
+   
+<!-- Mapping of User defined classes ends here -->

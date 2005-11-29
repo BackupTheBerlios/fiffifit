@@ -1,0 +1,49 @@
+<!--
+  This is the connection descriptor for a mysql database.
+  You have to modify your dbalias, username and password.
+-->
+
+
+    <!-- this connection was used as the default one within OJB -->
+    <!-- replaced by jndi
+    <jdbc-connection-descriptor
+   		jcd-alias="default"
+   		default-connection="true"
+   		platform="MySQL"
+   		jdbc-level="2.0"
+   		driver="com.mysql.jdbc.Driver"
+   		protocol="jdbc"
+   		subprotocol="mysql"
+   		dbalias="//calvin:3306/test"
+   		username="rmark"
+   		password="tiger06"
+        eager-release="false"
+   		batch-mode="false"
+        useAutoCommit="1"
+        ignoreAutoCommitExceptions="false"
+     >
+     -->
+    <jdbc-connection-descriptor
+   		jcd-alias="default"
+   		default-connection="true"
+   		platform="MySQL"
+   		jdbc-level="2.0"
+   		jndi-datasource-name="java:comp/env/trainer_db"
+        eager-release="false"
+   		batch-mode="false"
+        useAutoCommit="1"
+        ignoreAutoCommitExceptions="false"
+     >
+
+        <connection-pool
+            maxActive="21"
+            validationQuery="" />
+
+        <sequence-manager className="org.apache.ojb.broker.util.sequence.SequenceManagerHighLowImpl">
+            <attribute attribute-name="grabSize" attribute-value="20"/>
+            <attribute attribute-name="autoNaming" attribute-value="true"/>
+            <attribute attribute-name="globalSequenceId" attribute-value="false"/>
+            <attribute attribute-name="globalSequenceStart" attribute-value="10000"/>
+        </sequence-manager>
+   </jdbc-connection-descriptor>
+
